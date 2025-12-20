@@ -6,8 +6,8 @@ Ratekenya is a program that extracts all Chess Kenya players from a FIDE rating 
 output is in CSV and XML formats.
 
 The problem it solves is that the FIDE rating lists are usually very large in size
-(approximately 150 MB) and so it's easier to deal with a file that only includes players
-from a single country.
+(approximately 150 MB with 500,000 players) and so it's easier to deal with a file that
+only includes players from a single country.
 
 Ratekenya is written in [Python](https://www.python.org).
 
@@ -16,14 +16,19 @@ Note that this project is still in a pre-alpha state so use it with care.
 
 ## Run
 
-Ensure that your computer has Python installed.
+Ensure that your computer has Python installed and then install ReportLab inside a Python
+virtual environment.
 
 Fetch the FIDE rating list that you're going to process. The rating files are available
 on the FIDE website, for example by using this URL: http://ratings.fide.com/download/standard_nov25frl_xml.zip
 
-Run this command:
+Run these commands after activating the Python virtual environment:
 ```
-python3 getkenya.py
+python getkenya.py
+
+python stats.py
+
+python charts.py
 ```
 
 The output will be the files players_kenya.csv and players_kenya.xml.
@@ -60,5 +65,4 @@ See the GNU General Public License for more details.
 
 You should have received a copy of the GNU Affero General Public License along with this
 program; if not, see <https://www.gnu.org/licenses/>.
-
 
